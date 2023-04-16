@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-sm-10">
+      <div class="card-header card-header-primary card-header-icon">
+          <div class="card-text">
+              <h2 class="mat-h2">Patient </h2>
+          </div>
+      </div>
+  </div>
+  <form [formGroup]="form" #frmPatient="ngForm">
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="FirstName" minlength="3" required formControlName="firstName">
+          <small *ngIf="f['firstName'].errors?.['required'] && f['firstName'].touched" class="invalid">Is
+              required</small>
+          <small *ngIf="f['firstName'].errors?.['minlength'] && f['firstName'].touched" class="invalid">Minlength is
+              3</small>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="LastName" minlength="3" required formControlName="lastName">
+          <small *ngIf="f['lastName'].errors?.['required'] && f['lastName'].touched" class="invalid">Is
+              required</small>
+          <small *ngIf="f['lastName'].errors?.['minlength'] && f['lastName'].touched" class="invalid">Minlength is
+              3</small>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="DNI" maxlength="8" required formControlName="dni">
+          <small *ngIf="f['dni'].errors?.['required'] && f['dni'].touched" class="invalid">Is
+              required</small>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Address" formControlName="address">
+          <small *ngIf="f['address'].errors?.['required'] && f['address'].touched" class="invalid">Is
+              required</small>
+          <small *ngIf="f['address'].errors?.['minlength'] && f['address'].touched" class="invalid">Minlength is
+              3</small>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="phone" maxlength="9" required formControlName="phone">
+          <small *ngIf="f['phone'].errors?.['required'] && f['phone'].touched" class="invalid">Is
+              required</small>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="email" required formControlName="email">
+          <small *ngIf="f['email'].errors?.['required'] && f['email'].touched" class="invalid">Is
+              required</small>
+      </mat-form-field>
+  </form>
+
+  <button mat-raised-button color="primary"  [disabled]="frmPatient.invalid"(click)="operate()">Done</button>
+  <button mat-raised-button color="accent"   (click)="close()">Cancel</button>
+</div>
+

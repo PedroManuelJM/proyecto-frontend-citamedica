@@ -1,0 +1,21 @@
+mat-form-field {
+  display: contents;
+}
+
+.right{
+  float: center;
+  padding: 10px;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container>* {
+  width: 100%;
+}
+
+.invalid {
+  color: red;
+}

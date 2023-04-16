@@ -1,0 +1,33 @@
+.medicCSS {
+    background: darkblue;
+    color: white;
+}
+
+.consultCSS {
+    background: darkblue;
+    color: white;
+}
+
+#consult {
+    height: 100%;
+    width: 100%;
+    background-color: #555;
+    color: white;
+    text-align: center;
+}
+
+.fixedRigth {
+    top: auto !important;
+    right: 20px !important;
+    bottom: 10px !important;
+    left: auto !important;
+    position: fixed !important;
+}
+
+.fixedLeft {
+    top: auto !important;
+    right: auto !important;
+    bottom: 10px !important;
+    left: 20px !important;
+    position: fixed !important;
+}

@@ -1,0 +1,30 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.example-sidenav-container {
+    flex: 1;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.active {
+    background-color: #dcdcdc;
+}
+
+/*https://stackoverflow.com/questions/50655326/how-to-remove-button-style-or-overwrite-dynamically-added-classes-to-button-in-m*/
+.myButton:focus{
+    box-shadow: 0 0 rgba(255, 255, 255, 1) !important;
+    transition:none !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+    -webkit-tap-highlight-color:rgba(255, 255, 255, 1) !important;
+}
+

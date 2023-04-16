@@ -1,0 +1,14 @@
+<div class="example-container"  *ngIf="route.children.length === 0">
+    <mat-form-field>
+        <input matInput type="email" placeholder="Your email" required [(ngModel)]="email">
+    </mat-form-field>
+    
+    <br />
+
+    <button mat-raised-button color="primary" (click)="sendMail()" [disabled]="!email">Send Mail</button>
+
+    <mat-toolbar *ngIf="message">{{message}}</mat-toolbar>
+    <mat-toolbar *ngIf="error">{{error}}</mat-toolbar>
+</div>
+
+<router-outlet *ngIf="route.children.length !== 0"></router-outlet>

@@ -1,0 +1,23 @@
+<mat-toolbar *ngIf="!validRandom">
+    Link is not valid or has expired!
+</mat-toolbar>
+
+<form [formGroup]="form" (submit)="onSubmit()" *ngIf="validRandom">
+    <div class="example-container">
+        <mat-form-field>
+            <input matInput type="password" name="password" placeholder="New Password" formControlName="password"
+                [formGroup]="form" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="password" placeholder="Repeat Password" formControlName="confirmPassword"
+                [formGroup]="form" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Change Password</button>
+
+        <mat-toolbar *ngIf="form.controls['confirmPassword'].errors?.['not_the_same']">Password not match</mat-toolbar>
+        <mat-toolbar *ngIf="message">{{message}}</mat-toolbar>
+        <mat-toolbar *ngIf="error">{{error}}</mat-toolbar>
+    </div>
+</form>
